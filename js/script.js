@@ -5,7 +5,7 @@
 // Splash Page Redirection
 const isDevelopment = true; // Set to false for production
 const developmentFilePath = 'https://missionode.github.io/temple-app/'; // Hardcoded base path
-
+console.log("Pathname",developmentFilePath + 'index.html')
 if (isDevelopment && window.location.pathname === developmentFilePath + 'index.html') {
     console.log("Splash Page Detected (Dev):", window.location.pathname);
     setTimeout(function() {
