@@ -1,12 +1,17 @@
 /* settings.js */
 
 document.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('prasadams')) {
+        localStorage.setItem('prasadams', JSON.stringify([]));
+        console.log("prasadams initialized to empty array");
+    }
     setupPoojaModal();
     setupPrasadamModal();
     loadSettingsData();
     setupDatabaseManagement();
     setupNavigation();
 });
+
 
 function setupPoojaModal() {
     setupModal('pooja-modal', 'add-pooja', 'close-button');
@@ -51,17 +56,19 @@ function addPooja() {
 }
 
 function addPrasadam() {
+    console.log("addPrasadam() called");
     const name = document.getElementById('prasadam-name').value;
     const description = document.getElementById('prasadam-description').value;
     const price = parseFloat(document.getElementById('prasadam-price').value);
 
     const prasadam = { name: name, description: description, price: price };
+    console.log("Prasadam to add:", prasadam);
 
     let prasadams = localStorage.getItem('prasadams');
-    console.log("Prasadams before parse:", prasadams);
+    console.log("Raw prasadams before parse:", prasadams);
 
     prasadams = JSON.parse(prasadams) || [];
-    console.log("Prasadams after parse:", prasadams);
+    console.log("Parsed prasadams:", prasadams);
 
     prasadams.push(prasadam);
     localStorage.setItem('prasadams', JSON.stringify(prasadams));
@@ -69,6 +76,7 @@ function addPrasadam() {
 
     loadPrasadamList();
     document.getElementById('prasadam-form').reset();
+    console.log("addPrasadam() finished");
 }
 
 function loadSettingsData() {
@@ -86,9 +94,23 @@ function loadPrasadamList() {
     console.log("loadPrasadamList() called");
     const rawPrasadams = localStorage.getItem('prasadams');
     console.log("Raw prasadams from local storage:", rawPrasadams);
-    const prasadams = JSON.parse(rawPrasadams) || [];
-    const prasadamList = document.getElementById('prasadam-list');
-    prasadamList.innerHTML = '<h3>Prasadams</h3><ul>' + prasadams.map(prasadam => `<li>${prasadam.name} - ₹${prasadam.price}</li>`).join('') + '</ul>';
+
+    if (rawPrasadams && rawPrasadams !== "undefined") { // Add this check
+        try {
+            const prasadams = JSON.parse(rawPrasadams) || [];
+            console.log("parsed prasadams: ", prasadams);
+            const prasadamList = document.getElementById('prasadam-list');
+            prasadamList.innerHTML = '<h3>Prasadams</h3><ul>' + prasadams.map(prasadam => `<li>${prasadam.name} - ₹${prasadam.price}</li>`).join('') + '</ul>';
+        } catch (e) {
+            console.error("Error parsing prasadams:", e);
+            console.error("rawPrasadams value: ", rawPrasadams);
+        }
+    } else {
+        console.log("prasadams is undefined or null, initializing to empty array");
+        localStorage.setItem('prasadams', JSON.stringify([]));
+        const prasadamList = document.getElementById('prasadam-list');
+        prasadamList.innerHTML = '<h3>Prasadams</h3><ul></ul>'; // Display empty list
+    }
 }
 
 function setupDatabaseManagement() {
@@ -137,15 +159,17 @@ function restoreDatabase() {
         console.log("File selected:", file);
         const reader = new FileReader();
         reader.onload = function(event) {
+            console.log("File read successfully");
             const data = JSON.parse(event.target.result);
-            console.log("Restored data:", data); // Check the entire data object
-            console.log("Restored prasadams:", data.prasadams); // Check prasadams specifically
-            if(data.prasadams === undefined){
+            console.log("Parsed data:", data);
+            console.log("Restored prasadams:", data.prasadams);
+            if (data.prasadams === undefined) {
                 console.error("prasadams is undefined in restored data");
             }
+            localStorage.setItem('prasadams', JSON.stringify(data.prasadams));
+            console.log("prasadams set in local storage");
             localStorage.setItem('templeProfile', JSON.stringify(data.templeProfile));
             localStorage.setItem('poojas', JSON.stringify(data.poojas));
-            localStorage.setItem('prasadams', JSON.stringify(data.prasadams));
             localStorage.setItem('devotees', JSON.stringify(data.devotees));
             localStorage.setItem('poojaBookings', JSON.stringify(data.poojaBookings));
             localStorage.setItem('donations', JSON.stringify(data.donations));
