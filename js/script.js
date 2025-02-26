@@ -134,20 +134,25 @@ function saveToLocalStorage(key, data) {
 
 // header.js or your script.js
 
-document.addEventListener('DOMContentLoaded', function() {
-    updateHeaderTempleName()
-    console.log('DOM content loaded'); // Add this line
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const headerNav = document.querySelector('.header-nav');
+const headerNav = document.querySelector('.header-nav');
 
-    hamburgerMenu.addEventListener('click', function() {
-        headerNav.classList.toggle('show');
+if(headerNav) {
+    document.addEventListener('DOMContentLoaded', function() {
+        updateHeaderTempleName()
+        console.log('DOM content loaded'); // Add this line
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        
+    
+        hamburgerMenu.addEventListener('click', function() {
+            headerNav.classList.toggle('show');
+        });
     });
-});
-
-function updateHeaderTempleName() {
-    const templeProfile = JSON.parse(localStorage.getItem('templeProfile')) || {};
-    const templeName = templeProfile.templeName || "Your Page Title"; // Default if templeName is not found
-
-    document.querySelector('.header-title').textContent = templeName;
+    
+    function updateHeaderTempleName() {
+        const templeProfile = JSON.parse(localStorage.getItem('templeProfile')) || {};
+        const templeName = templeProfile.templeName || "Your Page Title"; // Default if templeName is not found
+    
+        document.querySelector('.header-title').textContent = templeName;
+    }
 }
+
