@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple App - Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body id="settings_body">
+
+
+    <header class="header">
+        <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="header-title">Your Page Title</div>
+        <nav class="header-nav">
+            <a href="help.html">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </a>
+            <a href="profile.html">
+                <i class="fas fa-user-circle"></i>
+                <span>Profile</span>
+            </a>
+            <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Settings</h1>
+
+        <h2>Pooja Management</h2>
+        <div id="pooja-list">
+            </div>
+        <button id="add-pooja">Add Pooja</button>
+
+        <h2>Prasadam Management</h2>
+        <div id="prasadam-list">
+            </div>
+        <button id="add-prasadam">Add Prasadam</button>
+
+        <button id="backup-database">Backup Database</button>
+        <button id="restore-database">Restore Database</button>
+        <button id="clear-database">Clear Database</button>
+
+        <button id="settings-to-dashboard">Continue to Dashboard</button>
+    </div>
+
+    <div id="pooja-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Add Pooja</h2>
+            <form id="pooja-form">
+                <div class="form-group">
+                    <label for="pooja-name">Name:</label>
+                    <input type="text" id="pooja-name" name="name" placeholder="Enter Pooja name" required>
+                </div>
+                <div class="form-group">
+                    <label for="pooja-description">Description:</label>
+                    <textarea id="pooja-description" name="description" placeholder="Enter Pooja description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pooja-price">Price:</label>
+                    <input type="number" id="pooja-price" name="price" placeholder="Enter Pooja price" required>
+                </div>
+                <div class="form-group">
+                    <label for="pooja-time">Time Taken (minutes):</label>
+                    <input type="number" id="pooja-time" name="time" placeholder="Enter time taken" required>
+                </div>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="prasadam-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Add Prasadam</h2>
+            <form id="prasadam-form">
+                <div class="form-group">
+                    <label for="prasadam-name">Name:</label>
+                    <input type="text" id="prasadam-name" name="name" placeholder="Enter Prasadam name" required>
+                </div>
+                <div class="form-group">
+                    <label for="prasadam-description">Description:</label>
+                    <textarea id="prasadam-description" name="description" placeholder="Enter Prasadam description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="prasadam-price">Price:</label>
+                    <input type="number" id="prasadam-price" name="price" placeholder="Enter Prasadam price" required>
+                </div>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    <div class="bottom-nav-labeled">
+        <a href="dashboard.html">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="devotees.html">
+            <i class="fas fa-users"></i>
+            <span>Devotees</span>
+        </a>
+        <a href="poojas.html">
+            <i class="fas fa-pray"></i>
+            <span>Poojas</span>
+        </a>
+        <a href="donations.html">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>Donations</span>
+        </a>
+       
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

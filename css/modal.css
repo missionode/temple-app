@@ -1,0 +1,92 @@
+/* modal.css */
+
+/* General Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust width as needed */
+    max-width: 500px; /* Maximum width */
+    position: relative; /* For close button positioning */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Content Styles (Specific to Context) */
+/* You can add specific styles for different modal contents here */
+
+/* Example: Styles for a modal with a form */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+modal-content form .form-group {
+    margin-bottom: 15px;
+}
+
+modal-content form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+modal-content form input[type="text"],
+modal-content form input[type="tel"],
+modal-content form input[type="email"],
+modal-content form input[type="date"],
+modal-content form input[type="number"],
+modal-content form select,
+modal-content form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+modal-content form textarea {
+    resize: vertical;
+}
+
+modal-content form button[type="submit"],
+modal-content form button[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+modal-content form button[type="submit"]:hover,
+modal-content form button[type="button"]:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,111 @@
+/* poojas.css */
+
+/* Poojas Page Styles */
+.pooja-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#pooja-filter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#pooja-booking-list {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#pooja-booking-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#pooja-booking-list li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+#pooja-booking-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#pooja-booking-modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+#pooja-booking-modal .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#pooja-booking-modal .close-button:hover,
+#pooja-booking-modal .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#pooja-booking-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#pooja-booking-form .form-group {
+    margin-bottom: 15px;
+}
+
+#pooja-booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#pooja-booking-form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#total-amount {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#pay-button {
+    background-color: #28a745; /* Green color for pay button */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#pay-button:hover {
+    background-color: #218838;
+}

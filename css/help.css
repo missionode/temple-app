@@ -1,0 +1,47 @@
+/* help.css */
+
+/* Help Page Styles */
+#nakshatra-info,
+#chakra-info,
+#app-info,
+#faq,
+#developer-info {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#nakshatra-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#nakshatra-table th,
+#nakshatra-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#nakshatra-table th {
+    background-color: #f2f2f2;
+}
+
+#chakra-list {
+    list-style: none;
+    padding: 0;
+}
+
+#chakra-list li {
+    margin-bottom: 10px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item h3 {
+    margin-bottom: 5px;
+}

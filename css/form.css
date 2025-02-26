@@ -1,0 +1,71 @@
+/* form.css */
+
+/* General Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button[type="submit"],
+button[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+select[multiple] {
+    height: 150px; /* Adjust height for multiple selects */
+}
+
+/* Error Styles */
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+    border-color: #dc3545; /* Red border for errors */
+}
+
+.form-group .error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Readonly Input Styles */
+input[readonly],
+textarea[readonly] {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    cursor: not-allowed;
+}

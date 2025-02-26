@@ -1,0 +1,48 @@
+/* dashboard.css */
+
+/* Dashboard Page Styles */
+.insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.chart-container,
+.popular-pooja,
+.returning-devotees,
+.favorite-devotees {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 280px;
+    overflow: scroll;
+}
+
+.chart-container h3,
+.popular-pooja h3,
+.returning-devotees h3,
+.favorite-devotees h3 {
+    margin-top: 0;
+}
+
+.chart-container canvas {
+    width: 100% !important; /* Ensure canvas takes full width */
+    height: auto !important; /* Maintain aspect ratio */
+}
+
+.favorite-devotees ul {
+    list-style: none;
+    padding: 0;
+}
+
+.favorite-devotees li {
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .insights {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+}

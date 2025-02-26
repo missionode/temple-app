@@ -1,0 +1,37 @@
+/* donations.css */
+
+.donation-form {
+    margin-bottom: 20px;
+}
+
+.donation-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.donation-form input[type="number"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.donation-form button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.qr-code-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#qr-code {
+    margin-bottom: 10px;
+}
+
+#upi-link {
+    word-wrap: break-word;
+}

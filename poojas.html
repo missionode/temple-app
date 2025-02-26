@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poojas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/poojas.css">
+</head>
+<body>
+    <header class="header">
+        <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="header-title">Your Page Title</div>
+        <nav class="header-nav">
+            <a href="help.html">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </a>
+            <a href="profile.html">
+                <i class="fas fa-user-circle"></i>
+                <span>Profile</span>
+            </a>
+            <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Pooja Bookings</h1>
+
+        <div id="pooja-list">
+            </div>
+
+        <p>Total Amount: ₹<span id="total-amount">0</span></p>
+
+        <label for="devotee-search">Search Devotee (Name/Phone):</label>
+        <input type="text" id="devotee-search" placeholder="Enter name or phone">
+        <ul id="devotee-results" style="display: none;"></ul>
+        <p id="devotee-id-display" style="display: none;"></p>
+
+        <button id="submit-booking">Submit Booking</button>
+        <div id="payment-link-container" style="display: none;">
+            <a id="payment-link" href="#" target="_blank">Payment Link</a>
+        </div>
+    </div>
+    <div class="bottom-nav-labeled">
+        <a href="dashboard.html">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="devotees.html">
+            <i class="fas fa-users"></i>
+            <span>Devotees</span>
+        </a>
+        <a href="poojas.html">
+            <i class="fas fa-pray"></i>
+            <span>Poojas</span>
+        </a>
+        <a href="donations.html">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>Donations</span>
+        </a>
+       
+    </div>
+    
+    <script src="js/poojas.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple App - Devotees</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/devotees.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <header class="header">
+        <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="header-title">Your Page Title</div>
+        <nav class="header-nav">
+            <a href="help.html">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </a>
+            <a href="profile.html">
+                <i class="fas fa-user-circle"></i>
+                <span>Profile</span>
+            </a>
+            <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Devotees</h1>
+
+        <div class="devotee-actions">
+            <button id="add-devotee">Add Devotee</button>
+            <input type="text" id="devotee-filter" placeholder="Filter by name/phone">
+        </div>
+
+        <div id="devotee-list">
+            </div>
+
+    </div>
+
+    <div id="devotee-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Add/Edit Devotee</h2>
+            <form id="devotee-form">
+                <label for="devotee-name">Name:</label>
+                <input type="text" id="devotee-name" required>
+            
+                <label for="devotee-phone">Phone:</label>
+                <input type="tel" id="devotee-phone">
+            
+                <label for="devotee-dob">Date of Birth:</label>
+                <input type="date" id="devotee-dob">
+            
+                <label for="devotee-nakshatra">Nakshatra:</label>
+                <select id="devotee-nakshatra">
+                    <option value="">Select Nakshatra</option>
+                    <option value="Ashwini">Ashwini</option>
+                    <option value="Bharani">Bharani</option>
+                    <option value="Krittika">Krittika</option>
+                    <option value="Rohini">Rohini</option>
+                    <option value="Mrigashira">Mrigashira</option>
+                    <option value="Ardra">Ardra</option>
+                    <option value="Punarvasu">Punarvasu</option>
+                    <option value="Pushya">Pushya</option>
+                    <option value="Ashlesha">Ashlesha</option>
+                    <option value="Magha">Magha</option>
+                    <option value="Purva Phalguni">Purva Phalguni</option>
+                    <option value="Uttara Phalguni">Uttara Phalguni</option>
+                    <option value="Hasta">Hasta</option>
+                    <option value="Chitra">Chitra</option>
+                    <option value="Swati">Swati</option>
+                    <option value="Vishakha">Vishakha</option>
+                    <option value="Anuradha">Anuradha</option>
+                    <option value="Jyeshtha">Jyeshtha</option>
+                    <option value="Mula">Mula</option>
+                    <option value="Purva Ashadha">Purva Ashadha</option>
+                    <option value="Uttara Ashadha">Uttara Ashadha</option>
+                    <option value="Shravana">Shravana</option>
+                    <option value="Dhanishtha">Dhanishtha</option>
+                    <option value="Shatabhisha">Shatabhisha</option>
+                    <option value="Purva Bhadrapada">Purva Bhadrapada</option>
+                    <option value="Uttara Bhadrapada">Uttara Bhadrapada</option>
+                    <option value="Revati">Revati</option>
+                </select>
+            
+                <label for="devotee-notes">Notes:</label>
+                <textarea id="devotee-notes"></textarea>
+            
+                <button type="submit">Save</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="bottom-nav-labeled">
+        <a href="dashboard.html">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="devotees.html">
+            <i class="fas fa-users"></i>
+            <span>Devotees</span>
+        </a>
+        <a href="poojas.html">
+            <i class="fas fa-pray"></i>
+            <span>Poojas</span>
+        </a>
+        <a href="donations.html">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>Donations</span>
+        </a>
+       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/devotees.js"></script>
+</body>
+</html>

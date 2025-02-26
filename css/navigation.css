@@ -1,0 +1,98 @@
+/* navigation.css */
+
+/* Bottom Navigation Styles */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 100; /* Ensure it's on top */
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #495057;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.bottom-nav a.active {
+    color: #007bff; /* Highlight active link */
+}
+
+.bottom-nav a img {
+    max-width: 24px;
+    margin-bottom: 5px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 101; /* Above bottom nav */
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu-items {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    z-index: 102; /* Above hamburger menu */
+}
+
+.menu-items.active {
+    display: flex; /* Show when active */
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-items a:last-child {
+    border-bottom: none;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 600px) {
+    .bottom-nav a img {
+        max-width: 20px;
+    }
+}

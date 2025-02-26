@@ -1,0 +1,133 @@
+/* settings.css */
+
+/* Settings Page Styles */
+#pooja-list,
+#prasadam-list {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#pooja-list h3,
+#prasadam-list h3 {
+    margin-top: 0;
+}
+
+#pooja-list ul,
+#prasadam-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#pooja-list li,
+#prasadam-list li {
+    margin-bottom: 5px;
+}
+
+#pooja-modal,
+#prasadam-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#pooja-modal .modal-content,
+#prasadam-modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+#pooja-modal .close-button,
+#prasadam-modal .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#pooja-modal .close-button:hover,
+#pooja-modal .close-button:focus,
+#prasadam-modal .close-button:hover,
+#prasadam-modal .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#pooja-form,
+#prasadam-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#pooja-form .form-group,
+#prasadam-form .form-group {
+    margin-bottom: 15px;
+}
+
+#pooja-form label,
+#prasadam-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#pooja-form input[type="text"],
+#pooja-form input[type="number"],
+#pooja-form textarea,
+#prasadam-form input[type="text"],
+#prasadam-form input[type="number"],
+#prasadam-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#pooja-form textarea,
+#prasadam-form textarea {
+    resize: vertical;
+}
+
+#backup-database,
+#restore-database,
+#clear-database {
+    background-color: #f0ad4e; /* Orange color for backup/restore */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#backup-database:hover,
+#restore-database:hover,
+#clear-database:hover {
+    background-color: #eea236;
+}
+
+#settings-to-dashboard {
+    background-color: #5cb85c; /* Green color for continue */
+}
+
+#settings-to-dashboard:hover {
+    background-color: #4cae4c;
+}
+
+#settings_body button {
+    margin-top: 10px;
+}

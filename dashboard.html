@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple App - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/charts.css">
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="header-title">Your Page Title</div>
+        <nav class="header-nav">
+            <a href="help.html">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </a>
+            <a href="profile.html">
+                <i class="fas fa-user-circle"></i>
+                <span>Profile</span>
+            </a>
+            <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </header>
+ 
+    <div class="container">
+        <h1>Dashboard</h1>
+        <h4>Temple Insights</h4>
+        <section class="insights">
+
+            <div class="chart-container">
+                <h3>Devotees by Day</h3>
+                <canvas id="devotees-day-chart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3>Devotees by Month</h3>
+                <canvas id="devotees-month-chart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3>Devotees by Year</h3>
+                <canvas id="devotees-year-chart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3>Pooja Distribution</h3>
+                <canvas id="pooja-distribution-chart"></canvas>
+            </div>
+
+            <div class="popular-pooja">
+                <h3>Popular Pooja</h3>
+                <p id="popular-pooja-name">Loading...</p>
+            </div>
+
+            <div class="returning-devotees">
+                <h3>Returning Devotees</h3>
+                <p id="returning-devotees-count">Loading...</p>
+            </div>
+
+            <div class="favorite-devotees">
+                <h3>Favorite Devotees</h3>
+                <ul id="favorite-devotees-list"></ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="bottom-nav-labeled">
+        <a href="dashboard.html">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="devotees.html">
+            <i class="fas fa-users"></i>
+            <span>Devotees</span>
+        </a>
+        <a href="poojas.html">
+            <i class="fas fa-pray"></i>
+            <span>Poojas</span>
+        </a>
+        <a href="donations.html">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>Donations</span>
+        </a>
+       
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="lib/chart-library.js"></script> -->
+    <script src="js/script.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

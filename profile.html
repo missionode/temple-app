@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple App - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="header-title">Your Page Title</div>
+        <nav class="header-nav">
+            <a href="help.html">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </a>
+            <a href="profile.html">
+                <i class="fas fa-user-circle"></i>
+                <span>Profile</span>
+            </a>
+            <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Temple Profile</h1>
+        <form id="profile-form">
+            <div class="form-group">
+                <label for="temple-name">Temple Name:</label>
+                <input type="text" id="temple-name" name="templeName" placeholder="Enter temple name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="Enter temple address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address">
+            </div>
+            <div class="form-group">
+                <label for="upi-id">UPI ID: </label>
+                <input type="text" id="upi-id" name="upiId" placeholder="Enter UPI ID" disabled>
+                <button type="button" id="activate-upi">Activate</button>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" placeholder="Enter temple description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="devathas">Devathas (Comma-separated):</label>
+                <input type="text" id="devathas" name="devathas" placeholder="Enter devathas (e.g., Shiva, Parvati)">
+            </div>
+            <button type="submit">Continue to Settings</button>
+        </form>
+    </div>
+    <div id="password-prompt" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Enter password to activate UPI:</p>
+            <input type="password" id="password-input">
+            <button id="confirm-password">Confirm</button>
+        </div>
+    </div>
+    <div class="bottom-nav-labeled">
+        <a href="dashboard.html">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="devotees.html">
+            <i class="fas fa-users"></i>
+            <span>Devotees</span>
+        </a>
+        <a href="poojas.html">
+            <i class="fas fa-pray"></i>
+            <span>Poojas</span>
+        </a>
+        <a href="donations.html">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>Donations</span>
+        </a>
+       
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

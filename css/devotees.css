@@ -1,0 +1,100 @@
+/* devotees.css */
+
+/* Devotees Page Styles */
+.devotee-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#devotee-filter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#devotee-list {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#devotee-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#devotee-list li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+#devotee-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#devotee-modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+#devotee-modal .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#devotee-modal .close-button:hover,
+#devotee-modal .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#devotee-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#devotee-form .form-group {
+    margin-bottom: 15px;
+}
+
+#devotee-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#devotee-form input[type="text"],
+#devotee-form input[type="tel"],
+#devotee-form input[type="date"],
+#devotee-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#devotee-form textarea {
+    resize: vertical;
+}
+
