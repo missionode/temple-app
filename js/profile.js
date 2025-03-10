@@ -33,7 +33,7 @@ function setupUpiActivation() {
 
     confirmButton.addEventListener('click', function() {
         const password = passwordInput.value;
-        if (password === 'Lokasamasthasukninobhavanthu') {
+        if (password === 'Lokasamasthasukhinobhavanthu') {
             upiInput.disabled = false;
             passwordPrompt.style.display = 'none';
         } else {
