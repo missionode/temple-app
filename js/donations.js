@@ -31,10 +31,10 @@ function generateDonationQRCode() {
     const upiId = templeProfile.upiId;
     const payeeName = templeProfile.templeName;
     const transactionId = Date.now().toString();
+    
+    const upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payeeName)}&am=${amount}&cu=INR`;
 
-    const upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payeeName)}&tr=${transactionId}&am=${amount}&cu=INR`;
-
-    document.getElementById('upi-id-display').textContent = upiId;
+    document.getElementById('upi-id-display').textContent = upiId; 
 
     generateQRCode(upiLink);
 }
