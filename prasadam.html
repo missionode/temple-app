@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple App - Donations</title>
+    <title>Prasadams</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/donations.css">
-</head>
+    <link rel="stylesheet" href="css/poojas.css"> </head>
 <body>
-
     <header class="header">
         <div class="hamburger-menu">
             <i class="fas fa-bars"></i>
@@ -33,19 +30,23 @@
     </header>
 
     <div class="container">
-        <h1 id="donation-title">Donations</h1>
+        <h1>Prasadam Orders</h1>
 
-        <div class="donation-form">
-            <label for="donation-amount">Amount (₹):</label>
-            <input type="number" id="donation-amount" placeholder="Enter amount">
-            <button id="generate-qr">Generate QR Code</button>
+        <div id="prasadam-list">
         </div>
 
-        <div class="qr-code-section">
-            <div id="qr-code"></div>
-            <p id="upi-id-display"></p> </div>
-    </div>
+        <p>Total Amount: ₹<span id="total-amount">0</span></p>
 
+        <label for="devotee-search">Search Devotee (Name/Phone):</label>
+        <input type="text" id="devotee-search" placeholder="Enter name or phone">
+        <ul id="devotee-results" style="display: none;"></ul>
+        <p id="devotee-id-display" style="display: none;"></p>
+
+        <button id="submit-booking">Submit Order</button>
+        <div id="payment-link-container" style="display: none;">
+            <a id="payment-link" href="#" target="_blank">Payment Link</a>
+        </div>
+    </div>
     <div class="bottom-nav-labeled">
         <a href="dashboard.html">
             <i class="fas fa-tachometer-alt"></i>
@@ -63,11 +64,9 @@
             <i class="fa-solid fa-cookie"></i>
             <span>Prasadam</span>
         </a>
-       
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="js/donations.js"></script>
+    <script src="js/prasadam.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
